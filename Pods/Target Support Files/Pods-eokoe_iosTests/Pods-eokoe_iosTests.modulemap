@@ -1,0 +1,6 @@
+framework module Pods_eokoe_iosTests {
+  umbrella header "Pods-eokoe_iosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
