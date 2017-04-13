@@ -20,6 +20,17 @@
 		D19A8ECA1E9FE39D0039DECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EC91E9FE39D0039DECA /* User.swift */; };
 		D19A8ECB1E9FE39D0039DECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EC91E9FE39D0039DECA /* User.swift */; };
 		D19A8ECE1E9FE72A0039DECA /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ECD1E9FE72A0039DECA /* UserTests.swift */; };
+		D19A8ED11E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */; };
+		D19A8ED21E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */; };
+		D19A8ED51E9FFCE70039DECA /* UsersModelFromJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ED41E9FFCE70039DECA /* UsersModelFromJSONTests.swift */; };
+		D19A8ED91EA000950039DECA /* JSONUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8ED81EA000950039DECA /* JSONUsers.json */; };
+		D19A8EDA1EA0011A0039DECA /* JSONUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8ED81EA000950039DECA /* JSONUsers.json */; };
+		D19A8EDC1EA002180039DECA /* JSONWithoutKeyResults.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */; };
+		D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResults.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */; };
+		D19A8EE01EA0080A0039DECA /* JSONUserDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */; };
+		D19A8EE11EA009BA0039DECA /* JSONUserDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */; };
+		D19A8EE31EA00E6F0039DECA /* JSONUserWrongKeys.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */; };
+		D19A8EE41EA00FE30039DECA /* JSONUserWrongKeys.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */; };
 		E5644E0CCBF58528202F6BE0 /* Pods_eokoe_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5665CAC0AFA5403ED7031B73 /* Pods_eokoe_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +76,12 @@
 		D19A8EC61E9FC8550039DECA /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		D19A8EC91E9FE39D0039DECA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D19A8ECD1E9FE72A0039DECA /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModelFromJSON.swift; sourceTree = "<group>"; };
+		D19A8ED41E9FFCE70039DECA /* UsersModelFromJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModelFromJSONTests.swift; sourceTree = "<group>"; };
+		D19A8ED81EA000950039DECA /* JSONUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUsers.json; sourceTree = "<group>"; };
+		D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONWithoutKeyResults.json; sourceTree = "<group>"; };
+		D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUserDataEmpty.json; sourceTree = "<group>"; };
+		D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUserWrongKeys.json; sourceTree = "<group>"; };
 		E20F5B89E95FEC5A51B0948C /* Pods_eokoe_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eokoe_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +161,7 @@
 		D19A8E951E9FC6F10039DECA /* eokoe_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8ECF1E9FEDAD0039DECA /* Protocols */,
 				D19A8EC81E9FE3730039DECA /* Models */,
 				D19A8EC51E9FC7950039DECA /* Network */,
 				D19A8EC41E9FC78B0039DECA /* Controllers */,
@@ -160,6 +178,8 @@
 		D19A8EAA1E9FC6F20039DECA /* eokoe_iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8ED71EA0007A0039DECA /* MockedJSONs */,
+				D19A8ED31E9FFC890039DECA /* ProtocolsTests */,
 				D19A8ECC1E9FE6CB0039DECA /* ModelsTests */,
 				D19A8EAB1E9FC6F20039DECA /* eokoe_iosTests.swift */,
 				D19A8EAD1E9FC6F20039DECA /* Info.plist */,
@@ -205,6 +225,33 @@
 				D19A8ECD1E9FE72A0039DECA /* UserTests.swift */,
 			);
 			name = ModelsTests;
+			sourceTree = "<group>";
+		};
+		D19A8ECF1E9FEDAD0039DECA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D19A8ED31E9FFC890039DECA /* ProtocolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8ED41E9FFCE70039DECA /* UsersModelFromJSONTests.swift */,
+			);
+			name = ProtocolsTests;
+			sourceTree = "<group>";
+		};
+		D19A8ED71EA0007A0039DECA /* MockedJSONs */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */,
+				D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */,
+				D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */,
+				D19A8ED81EA000950039DECA /* JSONUsers.json */,
+			);
+			name = MockedJSONs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +375,10 @@
 			files = (
 				D19A8EA11E9FC6F10039DECA /* LaunchScreen.storyboard in Resources */,
 				D19A8E9E1E9FC6F10039DECA /* Assets.xcassets in Resources */,
+				D19A8EE41EA00FE30039DECA /* JSONUserWrongKeys.json in Resources */,
+				D19A8EE11EA009BA0039DECA /* JSONUserDataEmpty.json in Resources */,
+				D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResults.json in Resources */,
+				D19A8EDA1EA0011A0039DECA /* JSONUsers.json in Resources */,
 				D19A8E9C1E9FC6F10039DECA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +387,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19A8EE31EA00E6F0039DECA /* JSONUserWrongKeys.json in Resources */,
+				D19A8ED91EA000950039DECA /* JSONUsers.json in Resources */,
+				D19A8EDC1EA002180039DECA /* JSONWithoutKeyResults.json in Resources */,
+				D19A8EE01EA0080A0039DECA /* JSONUserDataEmpty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +548,7 @@
 			files = (
 				D19A8ECA1E9FE39D0039DECA /* User.swift in Sources */,
 				D19A8E991E9FC6F10039DECA /* ViewController.swift in Sources */,
+				D19A8ED11E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */,
 				D19A8EC71E9FC8550039DECA /* UsersAPI.swift in Sources */,
 				D19A8E971E9FC6F10039DECA /* AppDelegate.swift in Sources */,
 			);
@@ -502,8 +558,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19A8ED21E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */,
 				D19A8ECE1E9FE72A0039DECA /* UserTests.swift in Sources */,
 				D19A8ECB1E9FE39D0039DECA /* User.swift in Sources */,
+				D19A8ED51E9FFCE70039DECA /* UsersModelFromJSONTests.swift in Sources */,
 				D19A8EAC1E9FC6F20039DECA /* eokoe_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

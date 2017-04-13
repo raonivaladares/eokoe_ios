@@ -1,0 +1,368 @@
+{
+  "pagination": {
+    "limit": 20,
+    "start": 20
+  },
+  "results": [
+    {
+      "avg_customer": 3.47404183724844,
+      "bio": {
+        "mini": "Rump tri-tip beef ball tip porchetta. Cow meatloaf rump strip steak ham."
+      },
+      "id": 1,
+      "name": {
+        "first": "Loiva",
+        "last": "Nunes",
+        "title": "Mrs"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/90.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/90.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/90.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.19248322880615,
+      "bio": {
+        "mini": "Hamburger ground round biltong bresaola short ribs brisket. Pork chop ground round pig short ribs, beef ribs t-bone pancetta meatball tenderloin leberkas bresaola meatloaf drumstick flank chuck."
+      },
+      "id": 2,
+      "name": {
+        "first": "Talita",
+        "last": "Moura",
+        "title": "Ms"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/65.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/65.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/65.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.58131081998182,
+      "bio": {
+        "mini": "Capicola tongue picanha porchetta. Short loin corned beef meatloaf turducken jowl tongue drumstick bresaola kevin beef ribs pork chop t-bone porchetta tail."
+      },
+      "id": 3,
+      "name": {
+        "first": "Telo",
+        "last": "Costa",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/79.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/79.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/79.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.40745571717734,
+      "bio": {
+        "mini": "Ribeye leberkas strip steak turkey pork belly, doner salami bresaola sausage landjaeger picanha shankle shank. Cow porchetta capicola leberkas biltong prosciutto."
+      },
+      "id": 4,
+      "name": {
+        "first": "Aventino",
+        "last": "Da mata",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/60.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/60.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/60.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.51213953997201,
+      "bio": {
+        "mini": "Pastrami shank ribeye chuck beef pork sirloin venison alcatra ground round fatback sausage landjaeger shoulder kevin. Tongue sirloin andouille short loin flank brisket."
+      },
+      "id": 5,
+      "name": {
+        "first": "Silvéria",
+        "last": "Da rosa",
+        "title": "Miss"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/66.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/66.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/66.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.55300012786971,
+      "bio": {
+        "mini": "Short ribs shankle ball tip prosciutto boudin flank turkey rump brisket sausage tail. Spare ribs beef pork ball tip kielbasa kevin ribeye."
+      },
+      "id": 6,
+      "name": {
+        "first": "Lauriana",
+        "last": "Monteiro",
+        "title": "Miss"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/67.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/67.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/67.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.40013149002893,
+      "bio": {
+        "mini": "Cupim chuck landjaeger meatball pork loin doner ball tip turkey ground round jerky shoulder corned beef filet mignon. Frankfurter cupim salami bacon landjaeger."
+      },
+      "id": 7,
+      "name": {
+        "first": "Zilca",
+        "last": "Da costa",
+        "title": "Ms"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/49.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/49.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/49.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.99149272896322,
+      "bio": {
+        "mini": "Burgdoggen strip steak fatback t-bone pig, ball tip turkey pastrami kielbasa cow pork loin biltong drumstick spare ribs tenderloin. Burgdoggen chicken tenderloin tongue flank jowl."
+      },
+      "id": 8,
+      "name": {
+        "first": "Josiene",
+        "last": "Da paz",
+        "title": "Mrs"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/78.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/78.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/78.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.37447398218792,
+      "bio": {
+        "mini": "Landjaeger cupim ham hamburger jerky pork. Salami andouille capicola doner, kielbasa shankle shank brisket frankfurter pork t-bone tenderloin alcatra prosciutto."
+      },
+      "id": 9,
+      "name": {
+        "first": "Edinaura",
+        "last": "Duarte",
+        "title": "Miss"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/58.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/58.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/58.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.14924562158966,
+      "bio": {
+        "mini": "Cupim salami tongue, t-bone chicken jerky kielbasa pork loin ground round sausage turkey fatback leberkas hamburger. Biltong fatback ribeye shoulder, pork loin sausage ham kielbasa."
+      },
+      "id": 10,
+      "name": {
+        "first": "Geni",
+        "last": "Da luz",
+        "title": "Miss"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/16.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/16.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/16.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.38468815390867,
+      "bio": {
+        "mini": "Chicken doner jowl flank, venison pig bacon boudin pancetta tri-tip rump t-bone filet mignon ribeye alcatra. Pork loin flank kevin, tongue chicken spare ribs filet mignon cupim boudin turkey kielbasa."
+      },
+      "id": 11,
+      "name": {
+        "first": "Everaldo",
+        "last": "Ramos",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/45.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/45.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/45.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.37928260214953,
+      "bio": {
+        "mini": "Doner bacon cow, picanha frankfurter brisket turkey turducken. Fatback ham ham hock meatball, kevin leberkas cow strip steak."
+      },
+      "id": 12,
+      "name": {
+        "first": "Quintino",
+        "last": "Barbosa",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/97.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/97.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/97.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.24866274197423,
+      "bio": {
+        "mini": "Corned beef frankfurter picanha brisket. Ham hock pork belly bacon ground round landjaeger leberkas."
+      },
+      "id": 13,
+      "name": {
+        "first": "Tirso",
+        "last": "Rezende",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/9.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/9.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/9.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.38116954418238,
+      "bio": {
+        "mini": "Beef ribs ham capicola, short loin kielbasa shank doner pork loin pancetta corned beef drumstick. Shankle shoulder meatloaf corned beef cupim chuck tri-tip pig kielbasa frankfurter tail t-bone prosciutto andouille."
+      },
+      "id": 14,
+      "name": {
+        "first": "Neila",
+        "last": "Castro",
+        "title": "Ms"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/46.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/46.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.23653265924658,
+      "bio": {
+        "mini": "Bresaola sausage hamburger tail. Pork belly pig short ribs filet mignon burgdoggen shank capicola pastrami boudin ham bresaola jowl flank."
+      },
+      "id": 15,
+      "name": {
+        "first": "Moema",
+        "last": "Souza",
+        "title": "Mrs"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/79.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/79.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/79.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.97581189754662,
+      "bio": {
+        "mini": "Shoulder ribeye spare ribs prosciutto bacon, ham tongue tenderloin short ribs landjaeger fatback pastrami drumstick. Frankfurter tail cupim chicken."
+      },
+      "id": 16,
+      "name": {
+        "first": "Gisele",
+        "last": "Da cunha",
+        "title": "Mrs"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/81.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/81.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/81.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.98929153443483,
+      "bio": {
+        "mini": "Biltong picanha porchetta, turkey fatback landjaeger drumstick leberkas chuck turducken bresaola cow swine capicola meatball. Leberkas porchetta flank brisket, jowl shank doner sausage turkey meatball spare ribs boudin tenderloin chicken."
+      },
+      "id": 17,
+      "name": {
+        "first": "Ringo",
+        "last": "Nogueira",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/73.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/73.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/73.jpg"
+      }
+    },
+    {
+      "avg_customer": 3.80071002756516,
+      "bio": {
+        "mini": "Sirloin meatloaf short loin, pork doner tri-tip andouille porchetta pastrami filet mignon pork belly. Kevin pastrami jowl, bacon ground round tenderloin leberkas short loin t-bone drumstick burgdoggen."
+      },
+      "id": 18,
+      "name": {
+        "first": "Rudinele",
+        "last": "Da conceição",
+        "title": "Mrs"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/85.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/85.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.11985550003239,
+      "bio": {
+        "mini": "Meatball frankfurter rump biltong tail. Ham hock pancetta picanha t-bone shankle."
+      },
+      "id": 19,
+      "name": {
+        "first": "Zelaci",
+        "last": "Nogueira",
+        "title": "Miss"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/66.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/66.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/66.jpg"
+      }
+    },
+    {
+      "avg_customer": 4.32124124179317,
+      "bio": {
+        "mini": "Meatball ham hock pork chop picanha shankle jerky, leberkas ball tip pastrami rump filet mignon drumstick venison ribeye. Chuck pork belly spare ribs flank, picanha jerky tri-tip hamburger cow pork loin meatball short ribs andouille."
+      },
+      "id": 20,
+      "name": {
+        "first": "Homero",
+        "last": "Barbosa",
+        "title": "Mr"
+      },
+      "nat": "BR",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/87.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/87.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/87.jpg"
+      }
+    }
+  ]
+}
