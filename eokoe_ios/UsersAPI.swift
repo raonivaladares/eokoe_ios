@@ -4,8 +4,9 @@ import SwiftyJSON
 
 enum Result {
   case error(title: String, message: String)
-  case success(response: String)
+  case success(response: [User])
 }
+
 class UsersAPI {
   static let sharedInstance = UsersAPI()
   private var baseURL = "https://testmobiledev.eokoe.com/users"
@@ -13,8 +14,7 @@ class UsersAPI {
   
   // MARK: Inits
   init(){
-    headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
-    headers["Accept"] = "application/json"
+    headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"    
   }
   
   func getUsers(completionHandler: @escaping (Result) -> Void) {
@@ -34,7 +34,7 @@ class UsersAPI {
       let json = JSON(data: data)
       let users = self.buildUsers(json: json)
       
-      completionHandler(.success(response: users.count.description))
+      completionHandler(.success(response: users))
     }
   }
 }
