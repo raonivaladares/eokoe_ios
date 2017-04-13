@@ -17,6 +17,9 @@
 		D19A8EAC1E9FC6F20039DECA /* eokoe_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EAB1E9FC6F20039DECA /* eokoe_iosTests.swift */; };
 		D19A8EB71E9FC6F20039DECA /* eokoe_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EB61E9FC6F20039DECA /* eokoe_iosUITests.swift */; };
 		D19A8EC71E9FC8550039DECA /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EC61E9FC8550039DECA /* UsersAPI.swift */; };
+		D19A8ECA1E9FE39D0039DECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EC91E9FE39D0039DECA /* User.swift */; };
+		D19A8ECB1E9FE39D0039DECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EC91E9FE39D0039DECA /* User.swift */; };
+		D19A8ECE1E9FE72A0039DECA /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ECD1E9FE72A0039DECA /* UserTests.swift */; };
 		E5644E0CCBF58528202F6BE0 /* Pods_eokoe_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5665CAC0AFA5403ED7031B73 /* Pods_eokoe_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,8 @@
 		D19A8EB61E9FC6F20039DECA /* eokoe_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eokoe_iosUITests.swift; sourceTree = "<group>"; };
 		D19A8EB81E9FC6F20039DECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D19A8EC61E9FC8550039DECA /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		D19A8EC91E9FE39D0039DECA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D19A8ECD1E9FE72A0039DECA /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		E20F5B89E95FEC5A51B0948C /* Pods_eokoe_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eokoe_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +144,7 @@
 		D19A8E951E9FC6F10039DECA /* eokoe_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8EC81E9FE3730039DECA /* Models */,
 				D19A8EC51E9FC7950039DECA /* Network */,
 				D19A8EC41E9FC78B0039DECA /* Controllers */,
 				D19A8E961E9FC6F10039DECA /* AppDelegate.swift */,
@@ -154,6 +160,7 @@
 		D19A8EAA1E9FC6F20039DECA /* eokoe_iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8ECC1E9FE6CB0039DECA /* ModelsTests */,
 				D19A8EAB1E9FC6F20039DECA /* eokoe_iosTests.swift */,
 				D19A8EAD1E9FC6F20039DECA /* Info.plist */,
 			);
@@ -182,6 +189,22 @@
 				D19A8EC61E9FC8550039DECA /* UsersAPI.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		D19A8EC81E9FE3730039DECA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8EC91E9FE39D0039DECA /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D19A8ECC1E9FE6CB0039DECA /* ModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8ECD1E9FE72A0039DECA /* UserTests.swift */,
+			);
+			name = ModelsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19A8ECA1E9FE39D0039DECA /* User.swift in Sources */,
 				D19A8E991E9FC6F10039DECA /* ViewController.swift in Sources */,
 				D19A8EC71E9FC8550039DECA /* UsersAPI.swift in Sources */,
 				D19A8E971E9FC6F10039DECA /* AppDelegate.swift in Sources */,
@@ -478,6 +502,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19A8ECE1E9FE72A0039DECA /* UserTests.swift in Sources */,
+				D19A8ECB1E9FE39D0039DECA /* User.swift in Sources */,
 				D19A8EAC1E9FC6F20039DECA /* eokoe_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +751,7 @@
 				D19A8EBD1E9FC6F20039DECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D19A8EBE1E9FC6F20039DECA /* Build configuration list for PBXNativeTarget "eokoe_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +760,7 @@
 				D19A8EC01E9FC6F20039DECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D19A8EC11E9FC6F20039DECA /* Build configuration list for PBXNativeTarget "eokoe_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +769,7 @@
 				D19A8EC31E9FC6F20039DECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
