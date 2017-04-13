@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Users View Controller-->
+        <!--Usuários-->
         <scene sceneID="c7G-ws-njp">
             <objects>
-                <tableViewController id="WXi-0H-6UD" customClass="UsersViewController" sceneMemberID="viewController">
+                <tableViewController id="WXi-0H-6UD" customClass="UsersTableViewController" customModule="eokoe_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LAJ-X8-JLX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,11 +32,11 @@
                             <outlet property="delegate" destination="WXi-0H-6UD" id="Ope-DS-QnZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uY8-2c-1LX"/>
+                    <navigationItem key="navigationItem" title="Usuários" id="uY8-2c-1LX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsT-lS-nR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1460.5" y="107.5"/>
+            <point key="canvasLocation" x="1690" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CgY-cI-xWi">
@@ -47,6 +47,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99607843137254903" green="0.32156862745098036" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

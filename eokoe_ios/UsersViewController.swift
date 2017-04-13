@@ -1,11 +1,14 @@
 import UIKit
 
-class ViewController: UIViewController {
-  var viewModel: UsersViewModel?
+class UsersTableViewController: UITableViewController {
   
+  var viewModel: UsersViewModel?
+
+  // MARK: View life-cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    AlertHelper.showProgress()
     UsersAPI.sharedInstance.getUsers() { result in
       switch result {
       case .success(let users): self.viewModel = UsersViewModel(users: users)
@@ -13,12 +16,15 @@ class ViewController: UIViewController {
       case .error(let title, let message):
         print("\(title): \(message)")
       }
+      AlertHelper.hideProgress()
     }
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+  
+  // MARK: Segue
+  
+  // MARK: Private methods
 }
 
+// MARK: Extensions
+extension UsersTableViewController {
+}
