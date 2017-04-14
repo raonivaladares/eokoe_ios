@@ -45,7 +45,7 @@ extension UsersTableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: UsersCell.reuseIdentifier, for: indexPath) as! UsersCell
     
-    if let cellSetupData: (name: String, miniBio: String, pictureURL: URL) = viewModel?.getCellSetUpData(indexPath: indexPath) {
+    if let cellSetupData: (name: String, miniBio: String, pictureURL: URL) = viewModel?.getCellSetUpData(index: indexPath.row) {
         cell.build(name: cellSetupData.name, miniBio: cellSetupData.miniBio, pictureURL: cellSetupData.pictureURL)
     } else {
       print("UsersTableViewController: Error on row: \(indexPath.row)")

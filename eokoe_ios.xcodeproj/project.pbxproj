@@ -172,6 +172,7 @@
 		D19A8E951E9FC6F10039DECA /* eokoe_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8EF31EA1347D0039DECA /* Extensions */,
 				D19A8EF21EA12A590039DECA /* Cells */,
 				D19A8EE51EA0127C0039DECA /* ViewModels */,
 				D19A8ECF1E9FEDAD0039DECA /* Protocols */,
@@ -292,6 +293,13 @@
 				D19A8EEE1EA02A1C0039DECA /* UsersCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		D19A8EF31EA1347D0039DECA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
