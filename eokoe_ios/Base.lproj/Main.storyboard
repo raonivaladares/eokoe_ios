@@ -81,10 +81,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Usuários" id="uY8-2c-1LX"/>
+                    <connections>
+                        <segue destination="7dd-zf-HLg" kind="show" id="mLv-5t-t4R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsT-lS-nR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1688.8" y="106.59670164917542"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Doq-jA-Els">
+            <objects>
+                <viewController id="7dd-zf-HLg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JE7-Cw-iBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="RJB-u9-XpT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kfT-gM-g0r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbx-0L-NMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CgY-cI-xWi">

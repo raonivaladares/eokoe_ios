@@ -12,6 +12,7 @@ class UsersTableViewController: UITableViewController {
     
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 140
+    tableView.tableFooterView = nil
   }
   
   // MARK: Segue
@@ -33,11 +34,7 @@ class UsersTableViewController: UITableViewController {
 }
 
 // MARK: Extensions
-extension UsersTableViewController {
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
+extension UsersTableViewController {  
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel?.cellsQuantity ?? 0  
   }
@@ -52,7 +49,5 @@ extension UsersTableViewController {
     }
     
     return cell
-    
   }
-  
 }
