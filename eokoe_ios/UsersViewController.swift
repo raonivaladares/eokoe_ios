@@ -17,8 +17,9 @@ class UsersTableViewController: UITableViewController {
   
   // MARK: Segue
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "ShowUserDetails", let viewController = segue.destination as? UserDetailsViewController {
-      viewController.inject(value: 900)
+    if segue.identifier == "ShowUserDetailsSegue", let viewController = segue.destination as? UserDetailsViewController {
+      let userID = viewModel?.userIDSelected ?? 0
+      viewController.inject(value: userID)
     }
   }
   

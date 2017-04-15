@@ -11,15 +11,17 @@ class UserDetailsViewController: UIViewController {
   
   @IBOutlet weak var scrollView: UIScrollView!
   
-  var userId: Int!
-  var viewModel: UserDetailsViewModel!
+  fileprivate var userID: Int!
+  private var viewModel: UserDetailsViewModel!
   
   // MARK: View life-cycle
   override func viewDidLoad() {
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.isTranslucent = true
-    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
     requestUserDetails()
   }
   
@@ -38,7 +40,7 @@ class UserDetailsViewController: UIViewController {
   // MARK: Private methods
   private func requestUserDetails() {
     AlertHelper.showProgress()
-    UserDetailsAPI.sharedInstance.getUserDetails() { result in
+    UserDetailsAPI.sharedInstance.getUserDetails(userID: userID) { result in
       switch result {
       case .success(let userDetails):
         self.viewModel = UserDetailsViewModel(userDetails: userDetails)
@@ -66,6 +68,6 @@ extension UserDetailsViewController: Injectable {
   typealias T = Int
   
   func inject(value: T) {
-    userId = value
+    userID = value
   }
 }

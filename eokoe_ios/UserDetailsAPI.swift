@@ -9,7 +9,7 @@ class UserDetailsAPI {
   }
   
   static let sharedInstance = UserDetailsAPI()
-  private var baseURL = "https://testmobiledev.eokoe.com/user/900"
+  private var baseURL = "https://testmobiledev.eokoe.com/user/"
   private var headers: [String: String] = [:]
   
   // MARK: Inits
@@ -17,8 +17,8 @@ class UserDetailsAPI {
     headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
   }
   
-  func getUserDetails(completionHandler: @escaping (Result) -> Void) {
-    Alamofire.request(baseURL, headers: headers).responseJSON { response in
+  func getUserDetails(userID: Int, completionHandler: @escaping (Result) -> Void) {
+    Alamofire.request(baseURL + userID.description, headers: headers).responseJSON { response in
       guard response.result.isSuccess else {
         print("UsersAPI Error: \(response.result.error.debugDescription)")
         return completionHandler(.error(title: "Atenção", message: "Nossos servidores não estão respondendo, isso pode ser causado por uma fraca conexão ou um erro em nossos próprios servidores."))
