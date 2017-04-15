@@ -6,6 +6,8 @@ struct UsersViewModel {
     return users.count
   }
   
+  var userIDSelected: Int?
+  
   init(users: [User]) {
     self.users = users
   }
@@ -22,5 +24,9 @@ struct UsersViewModel {
     let pictureURL: URL! = URL(string: user.pictureURL)
     
     return (name, miniBio, pictureURL)
+  }
+  
+  mutating func setUserSelected(indexPath: IndexPath) {
+    userIDSelected = users[indexPath.row].id
   }
 }

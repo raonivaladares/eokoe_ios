@@ -9,7 +9,8 @@ class UserDetailsViewController: UIViewController {
   @IBOutlet weak var emailLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
   
-  var id: Int!
+  var userId: Int!
+  var viewModel: UserDetailsViewModel!
   
   // MARK: View life-cycle
   override func viewDidLoad() {
@@ -31,11 +32,23 @@ class UserDetailsViewController: UIViewController {
     AlertHelper.showProgress()
     UserDetailsAPI.sharedInstance.getUserDetails() { result in
       switch result {
-      case .success(let userDetails): break
+      case .success(let userDetails):
+        self.viewModel = UserDetailsViewModel(userDetails: userDetails)
+        self.buildUI()
       case .error(let title, let message):
         print("\(title): \(message)")
       }
       AlertHelper.hideProgress()
+    }
+  }
+  
+  private func buildUI() {
+    if let userDetailsSetUp: (name: String, bio: String, email: String, location: String, pictureURL: URL) = viewModel.getUserSetUpData() {
+      profileImageView.af_setImage(withURL: userDetailsSetUp.pictureURL)
+      nameLabel.text = userDetailsSetUp.name
+      bioLabel.text = userDetailsSetUp.bio
+      emailLabel.text = userDetailsSetUp.email
+      locationLabel.text = userDetailsSetUp.location
     }
   }
 }
@@ -45,6 +58,6 @@ extension UserDetailsViewController: Injectable {
   typealias T = Int
   
   func inject(value: T) {
-    id = value
+    userId = value
   }
 }

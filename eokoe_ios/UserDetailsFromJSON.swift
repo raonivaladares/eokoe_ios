@@ -16,10 +16,10 @@ extension UserDetailsModelsFromJSON {
     }
     
     var bio: String?  = nil
-    if let miniBio = json["bio"]["mini"].string {
-      bio = miniBio
-    }else if let fullBio = json["bio"]["full"].string {
+    if let fullBio = json["bio"]["full"].string {
       bio = fullBio
+    }else if let miniBio = json["bio"]["mini"].string {
+      bio = miniBio
     }
     
     guard let hasBio = bio else {
@@ -27,20 +27,13 @@ extension UserDetailsModelsFromJSON {
       return nil
     }
     
-    guard let email = json["email"].string else {
-      print("buildUserDetails error: key id")
-      return nil
-    }
-    
-    guard let location = json["location"]["city"].string else {
-      print("buildUserDetails error: key id")
-      return nil
-    }
-    
     guard let pictureURL = json["picture"]["medium"].string else {
-      print("buildUserDetails error: key thumbnail")
+      print("buildUserDetails error: key picture or medium")
       return nil
     }
+    
+    let email = json["email"].string
+    let location = json["location"]["city"].string
     
     return UserDetails(firstName: firstName, lastName: lastName, bio: hasBio, email: email, location: location, pictureURL: pictureURL)
   }

@@ -57,7 +57,7 @@ extension UsersTableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //viewModel?.setArticleSelected(indexPath: indexPath)
+    viewModel?.setUserSelected(indexPath: indexPath)
     performSegue(withIdentifier: "ShowUserDetailsSegue", sender: nil)
   }
 }
