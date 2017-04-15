@@ -9,7 +9,7 @@ class UserDetailsAPI {
   }
   
   static let sharedInstance = UserDetailsAPI()
-  private var baseURL = "https://testmobiledev.eokoe.com/user/1"
+  private var baseURL = "https://testmobiledev.eokoe.com/user/900"
   private var headers: [String: String] = [:]
   
   // MARK: Inits

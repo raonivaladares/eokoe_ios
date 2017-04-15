@@ -9,6 +9,8 @@ class UserDetailsViewController: UIViewController {
   @IBOutlet weak var emailLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
   
+  @IBOutlet weak var scrollView: UIScrollView!
+  
   var userId: Int!
   var viewModel: UserDetailsViewModel!
   
@@ -25,6 +27,12 @@ class UserDetailsViewController: UIViewController {
     navigationController?.navigationBar.isTranslucent = UINavigationBar.appearance().isTranslucent
     navigationController?.navigationBar.setBackgroundImage(UINavigationBar.appearance().backgroundImage(for: UIBarMetrics.default), for:UIBarMetrics.default)
     navigationController?.navigationBar.shadowImage = UINavigationBar.appearance().shadowImage
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
+    scrollView.contentSize = CGSize(width: view.frame.size.width, height: scrollView.frame.size.width + bioLabel.frame.size.height)
   }
   
   // MARK: Private methods
