@@ -32,7 +32,7 @@ class UserDetailsViewController: UIViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    scrollView.contentSize = CGSize(width: view.frame.size.width, height: scrollView.frame.size.width + bioLabel.frame.size.height)
+    scrollView.contentSize = CGSize(width: view.frame.size.width, height: scrollView.frame.size.width + bioLabel.frame.size.height + 15)
   }
   
   // MARK: Private methods
