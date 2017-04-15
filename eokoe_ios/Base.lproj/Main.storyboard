@@ -123,7 +123,7 @@
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="cBl-Fn-fuV" firstAttribute="leading" secondItem="chJ-Sn-XLv" secondAttribute="leading" constant="20" id="7jM-En-3ip"/>
                                                     <constraint firstItem="yIh-Vk-WFy" firstAttribute="leading" secondItem="chJ-Sn-XLv" secondAttribute="leading" id="Exj-fz-Ig1"/>
@@ -134,12 +134,44 @@
                                                     <constraint firstItem="yIh-Vk-WFy" firstAttribute="top" secondItem="chJ-Sn-XLv" secondAttribute="top" id="qaK-k1-m9K"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6RQ-xS-RkN">
+                                                <rect key="frame" x="28" y="230" width="319" height="82"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-IM-wUJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[bio]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvM-rh-028">
+                                                        <rect key="frame" x="0.0" y="20.5" width="35.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rix-ZN-KkE">
+                                                        <rect key="frame" x="0.0" y="41" width="40.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[location]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-fk-71f">
+                                                        <rect key="frame" x="0.0" y="61.5" width="72.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="6RQ-xS-RkN" firstAttribute="leading" secondItem="jtm-99-GoT" secondAttribute="leadingMargin" constant="20" id="F7P-Hd-FJj"/>
                                             <constraint firstAttribute="trailing" secondItem="chJ-Sn-XLv" secondAttribute="trailing" id="MRQ-Sg-xsX"/>
+                                            <constraint firstItem="6RQ-xS-RkN" firstAttribute="top" secondItem="chJ-Sn-XLv" secondAttribute="bottom" constant="30" id="T7N-yj-2rx"/>
                                             <constraint firstItem="chJ-Sn-XLv" firstAttribute="leading" secondItem="jtm-99-GoT" secondAttribute="leading" id="V4E-YR-q4x"/>
                                             <constraint firstItem="chJ-Sn-XLv" firstAttribute="top" secondItem="jtm-99-GoT" secondAttribute="top" id="sqa-v1-7A6"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6RQ-xS-RkN" secondAttribute="trailing" constant="20" id="z35-a5-H2z"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -163,6 +195,14 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="ZvM-rh-028" id="T6d-UO-Pa3"/>
+                        <outlet property="coverImageView" destination="yIh-Vk-WFy" id="8oT-dF-wAM"/>
+                        <outlet property="emailLabel" destination="rix-ZN-KkE" id="Ljn-lO-AY2"/>
+                        <outlet property="locationLabel" destination="YNm-fk-71f" id="VbO-MK-24t"/>
+                        <outlet property="nameLabel" destination="JBR-IM-wUJ" id="qVf-Zx-eKF"/>
+                        <outlet property="profileImageView" destination="cBl-Fn-fuV" id="i5V-JF-UuO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbx-0L-NMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
