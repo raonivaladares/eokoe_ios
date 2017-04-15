@@ -110,9 +110,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chJ-Sn-XLv">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIh-Vk-WFy" userLabel="Cover">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserDetailsCover" translatesAutoresizingMaskIntoConstraints="NO" id="yIh-Vk-WFy" userLabel="Cover">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
-                                                        <color key="backgroundColor" red="0.096909886390000005" green="0.34174133280000002" blue="0.5518651832" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cBl-Fn-fuV" userLabel="Profile">
                                                         <rect key="frame" x="20" y="130" width="70" height="70"/>
@@ -234,5 +233,6 @@
     </scenes>
     <resources>
         <image name="IconProfile" width="50" height="50"/>
+        <image name="UserDetailsCover" width="400" height="225"/>
     </resources>
 </document>

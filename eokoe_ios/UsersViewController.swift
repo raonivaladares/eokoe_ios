@@ -16,6 +16,11 @@ class UsersTableViewController: UITableViewController {
   }
   
   // MARK: Segue
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowUserDetails", let viewController = segue.destination as? UserDetailsViewController {
+      viewController.inject(value: 900)
+    }
+  }
   
   // MARK: Private methods
   private func requestUsers() {

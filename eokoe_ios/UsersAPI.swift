@@ -2,12 +2,12 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-enum Result {
-  case error(title: String, message: String)
-  case success(response: [User])
-}
-
 class UsersAPI {
+  enum Result {
+    case error(title: String, message: String)
+    case success(response: [User])
+  }
+  
   static let sharedInstance = UsersAPI()
   private var baseURL = "https://testmobiledev.eokoe.com/users"
   private var headers: [String: String] = [:]

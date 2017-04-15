@@ -9,32 +9,32 @@ struct User {
   
   init?(id: Int, firstName: String, lastName: String, miniBio: String, pictureURL: String) {
     guard id > 0 else {
-      print("Article init error: title empty")
+      print("User init error: id invalid empty")
       return nil
     }
     
     guard !firstName.isEmpty else {
-      print("Article init article error: section empty")
+      print("User init article error: firstName empty")
       return nil
     }
     
     guard !lastName.isEmpty else {
-      print("Article initarticle error: publishedAt empty")
+      print("User initarticle error: lastName empty")
       return nil
     }
     
     guard !miniBio.isEmpty else {
-      print("Article init article error: content empty")
+      print("User init article error: miniBio empty")
       return nil
     }
     
     guard !miniBio.isEmpty else {
-      print("Article init article error: content empty")
+      print("User init article error: miniBio empty")
       return nil
     }
     
     guard !pictureURL.isEmpty else {
-      print("Article init article error: content empty")
+      print("User init article error: pictureURL empty")
       return nil
     }
     

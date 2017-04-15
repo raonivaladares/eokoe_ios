@@ -38,6 +38,12 @@
 		D19A8EEF1EA02A1C0039DECA /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EEE1EA02A1C0039DECA /* UsersCell.swift */; };
 		D19A8EF11EA1143D0039DECA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EF01EA1143D0039DECA /* ReusableView.swift */; };
 		D19A8EF91EA18BBA0039DECA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EF81EA18BBA0039DECA /* UserDetailsViewController.swift */; };
+		D19A8EFB1EA1A2E70039DECA /* UserDetailsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EFA1EA1A2E70039DECA /* UserDetailsAPI.swift */; };
+		D19A8EFD1EA1A6050039DECA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EFC1EA1A6050039DECA /* UserDetails.swift */; };
+		D19A8EFF1EA1AD8F0039DECA /* UserDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EFE1EA1AD8F0039DECA /* UserDetailsTests.swift */; };
+		D19A8F011EA1B7110039DECA /* UserDetailsFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F001EA1B7110039DECA /* UserDetailsFromJSON.swift */; };
+		D19A8F031EA24DF90039DECA /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F021EA24DF90039DECA /* Injectable.swift */; };
+		D19A8F051EA2889F0039DECA /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F041EA2889F0039DECA /* UserDetailsViewModel.swift */; };
 		E5644E0CCBF58528202F6BE0 /* Pods_eokoe_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5665CAC0AFA5403ED7031B73 /* Pods_eokoe_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +101,12 @@
 		D19A8EEE1EA02A1C0039DECA /* UsersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
 		D19A8EF01EA1143D0039DECA /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D19A8EF81EA18BBA0039DECA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		D19A8EFA1EA1A2E70039DECA /* UserDetailsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsAPI.swift; sourceTree = "<group>"; };
+		D19A8EFC1EA1A6050039DECA /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		D19A8EFE1EA1AD8F0039DECA /* UserDetailsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsTests.swift; sourceTree = "<group>"; };
+		D19A8F001EA1B7110039DECA /* UserDetailsFromJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsFromJSON.swift; sourceTree = "<group>"; };
+		D19A8F021EA24DF90039DECA /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		D19A8F041EA2889F0039DECA /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
 		E20F5B89E95FEC5A51B0948C /* Pods_eokoe_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eokoe_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -226,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				D19A8EC61E9FC8550039DECA /* UsersAPI.swift */,
+				D19A8EFA1EA1A2E70039DECA /* UserDetailsAPI.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				D19A8EC91E9FE39D0039DECA /* User.swift */,
+				D19A8EFC1EA1A6050039DECA /* UserDetails.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				D19A8ECD1E9FE72A0039DECA /* UserTests.swift */,
+				D19A8EFE1EA1AD8F0039DECA /* UserDetailsTests.swift */,
 			);
 			name = ModelsTests;
 			sourceTree = "<group>";
@@ -251,6 +266,8 @@
 			children = (
 				D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */,
 				D19A8EF01EA1143D0039DECA /* ReusableView.swift */,
+				D19A8F001EA1B7110039DECA /* UserDetailsFromJSON.swift */,
+				D19A8F021EA24DF90039DECA /* Injectable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -278,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				D19A8EE61EA012AA0039DECA /* UsersViewModel.swift */,
+				D19A8F041EA2889F0039DECA /* UserDetailsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -598,15 +616,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19A8EF91EA18BBA0039DECA /* UserDetailsViewController.swift in Sources */,
+				D19A8EFB1EA1A2E70039DECA /* UserDetailsAPI.swift in Sources */,
 				D19A8EF11EA1143D0039DECA /* ReusableView.swift in Sources */,
 				D19A8EEF1EA02A1C0039DECA /* UsersCell.swift in Sources */,
 				D19A8ECA1E9FE39D0039DECA /* User.swift in Sources */,
+				D19A8EFD1EA1A6050039DECA /* UserDetails.swift in Sources */,
+				D19A8F031EA24DF90039DECA /* Injectable.swift in Sources */,
 				D19A8EE71EA012AA0039DECA /* UsersViewModel.swift in Sources */,
 				D19A8E991E9FC6F10039DECA /* UsersViewController.swift in Sources */,
 				D19A8ED11E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */,
 				D19A8EED1EA027060039DECA /* AlertHelper.swift in Sources */,
+				D19A8F051EA2889F0039DECA /* UserDetailsViewModel.swift in Sources */,
 				D19A8EC71E9FC8550039DECA /* UsersAPI.swift in Sources */,
 				D19A8E971E9FC6F10039DECA /* AppDelegate.swift in Sources */,
+				D19A8F011EA1B7110039DECA /* UserDetailsFromJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D19A8ED21E9FEE070039DECA /* UsersModelFromJSON.swift in Sources */,
+				D19A8EFF1EA1AD8F0039DECA /* UserDetailsTests.swift in Sources */,
 				D19A8EEB1EA015570039DECA /* UsersViewModel.swift in Sources */,
 				D19A8ECE1E9FE72A0039DECA /* UserTests.swift in Sources */,
 				D19A8ECB1E9FE39D0039DECA /* User.swift in Sources */,
@@ -765,6 +789,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RVC6T4M2H3;
 				INFOPLIST_FILE = eokoe_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rov.eokoe-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -779,6 +804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RVC6T4M2H3;
 				INFOPLIST_FILE = eokoe_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rov.eokoe-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
