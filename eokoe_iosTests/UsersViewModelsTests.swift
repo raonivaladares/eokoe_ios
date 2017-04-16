@@ -7,11 +7,11 @@ class UsersViewModelsTests: XCTestCase {
   
   override func setUp() {
     let usersEmpty: [User] = []
-    viewModelUsersEmpty = UsersViewModel(users: usersEmpty)
+    viewModelUsersEmpty = UsersViewModel(users: usersEmpty, pageIndex: nil)
     
     
     let usersSome: [User] = [User(id: 1, firstName: "firstName", lastName: "lastName", miniBio: "miniBio", pictureURL: "pictureURL")!]
-    viewModelSome = UsersViewModel(users: usersSome)
+    viewModelSome = UsersViewModel(users: usersSome, pageIndex: nil)
   }
   
   func testInit() {

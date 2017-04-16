@@ -1,7 +1,6 @@
 import Foundation
 
 struct UserDetails {
-  
   let firstName: String!
   let LastName: String!
   let bio: String!

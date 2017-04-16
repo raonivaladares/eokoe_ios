@@ -3,6 +3,7 @@ import UIKit
 class UsersTableViewController: UITableViewController {
   
   var viewModel: UsersViewModel?
+  var isRequesting = false
   
   // MARK: View life-cycle
   override func viewDidLoad() {
@@ -29,11 +30,12 @@ class UsersTableViewController: UITableViewController {
     AlertHelper.showProgress()
     UsersAPI.sharedInstance.getUsers() { result in
       switch result {
-      case .success(let users):
-        self.viewModel = UsersViewModel(users: users)
+      case .success(let users, let pageIndex):
+        self.viewModel = UsersViewModel(users: users, pageIndex: pageIndex)
         self.tableView.reloadData()
       case .error(let title, let message):
         print("\(title): \(message)")
+        AlertHelper.message(viewController: self, title: title, message: message)
       }
       AlertHelper.hideProgress()
     }
@@ -61,5 +63,34 @@ extension UsersTableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     viewModel?.setUserSelected(indexPath: indexPath)
     performSegue(withIdentifier: "ShowUserDetailsSegue", sender: nil)
+  }
+  
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    guard let quantity = viewModel?.cellsQuantity else {
+      print("Erro on pagination: quantity of itens invalid")
+      return
+    }
+    
+    guard let lastUserIndex = viewModel?.lastUserIndex else {
+      print("Erro on pagination: quantity of itens invalid")
+      return
+    }
+    
+    if (indexPath.row == quantity - 1) && !isRequesting  {
+      isRequesting = true
+      UsersAPI.sharedInstance.getUsersWithIndex(lastUserIndex: lastUserIndex) { result in
+        switch result {
+        case .success(let users, let pageIndex):
+          self.viewModel?.update(newUsers: users, pageIndex: pageIndex)
+          
+          self.tableView.reloadData()
+          print(users)
+        case .error(let title, let message):
+          print("\(title): \(message)")
+          AlertHelper.message(viewController: self, title: title, message: message)
+        }
+        self.isRequesting = false
+      }
+    }
   }
 }

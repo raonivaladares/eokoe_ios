@@ -1,15 +1,20 @@
 import Foundation
 
-struct UsersViewModel {
-  private let users: [User]!
+class UsersViewModel {
+  private var users: [User]!
   var cellsQuantity: Int! {
     return users.count
+  }
+  private var pageIndex: PageIndex?
+  var lastUserIndex: Int? {
+    return pageIndex?.start
   }
   
   var userIDSelected: Int?
   
-  init(users: [User]) {
+  init(users: [User], pageIndex: PageIndex?) {
     self.users = users
+    self.pageIndex = pageIndex
   }
   
   func getCellSetUpData(index: Int) -> (String, String, URL)? {
@@ -26,7 +31,14 @@ struct UsersViewModel {
     return (name, miniBio, pictureURL)
   }
   
-  mutating func setUserSelected(indexPath: IndexPath) {
+  func setUserSelected(indexPath: IndexPath) {
     userIDSelected = users[indexPath.row].id
+  }
+  
+  func update(newUsers: [User], pageIndex: PageIndex?) {
+    for item in newUsers {
+      users.append(item)
+    }
+    self.pageIndex = pageIndex
   }
 }

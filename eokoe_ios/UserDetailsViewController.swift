@@ -39,6 +39,7 @@ class UserDetailsViewController: UIViewController {
   @IBAction func backAction(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true)
   }
+  
   // MARK: Private methods
   private func requestUserDetails() {
     AlertHelper.showProgress()
@@ -50,7 +51,7 @@ class UserDetailsViewController: UIViewController {
         self.scrollView.isHidden = false
       case .error(let title, let message):
         AlertHelper.message(viewController: self, title: title, message: message) {
-          _ = self.navigationController?.popViewController(animated: true)
+          self.dismiss(animated: true)
         }
       }
       AlertHelper.hideProgress()

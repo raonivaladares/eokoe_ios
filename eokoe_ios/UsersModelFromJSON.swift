@@ -4,6 +4,20 @@ import SwiftyJSON
 protocol UsersModelsFromJSON: class {}
 
 extension UsersModelsFromJSON {
+  func buildPageIndex(json: JSON) -> PageIndex? {
+    guard let start = json["pagination"]["start"].int else {
+      print("BuildUsers: there is no key: pagination start")
+      return nil
+    }
+    
+    guard let limit = json["pagination"]["limit"].int else {
+      print("BuildUsers: there is no key: pagination limit")
+      return nil
+    }
+    
+    return PageIndex(start: start, limit: limit)
+    
+  }
   func buildUsers(json: JSON) -> [User] {
     var users: [User] = []
     
