@@ -12,7 +12,8 @@ class UserDetailsViewController: UIViewController {
   @IBOutlet weak var scrollView: UIScrollView!
   
   fileprivate var userID: Int!
-  private var viewModel: UserDetailsViewModel!
+  fileprivate var viewModel: UserDetailsViewModel!
+  private var photoPicker: PhotoPicker!
   
   // MARK: View life-cycle
   override func viewDidLoad() {
@@ -22,6 +23,8 @@ class UserDetailsViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    photoPicker = PhotoPicker(viewController: self)
+    photoPicker.photoPickerDelegate = self
     requestUserDetails()
   }
   
@@ -34,7 +37,11 @@ class UserDetailsViewController: UIViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    scrollView.contentSize = CGSize(width: view.frame.size.width, height: scrollView.frame.size.width + bioLabel.frame.size.height + 15)
+    scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.width + bioLabel.frame.size.height + emailLabel.frame.size.height + locationLabel.frame.height + 20)
+  }
+  
+  @IBAction func sendImageAction(_ sender: UIButton) {
+    photoPicker.callActionMenu(sender: sender)
   }
   
   // MARK: Private methods
@@ -52,7 +59,7 @@ class UserDetailsViewController: UIViewController {
     }
   }
   
-  private func buildUI() {
+  fileprivate func buildUI() {
     if let userDetailsSetUp: (name: String, bio: String, email: String, location: String, pictureURL: URL) = viewModel.getUserSetUpData() {
       profileImageView.af_setImage(withURL: userDetailsSetUp.pictureURL)
       nameLabel.text = userDetailsSetUp.name
@@ -69,5 +76,29 @@ extension UserDetailsViewController: Injectable {
   
   func inject(value: T) {
     userID = value
+  }
+}
+
+extension UserDetailsViewController: PhotoPickerDelegate {
+  func handlerSelected(selected: UIImage?, name: String?) {
+    if let image = selected, let name = name  {
+      if let data = UIImageJPEGRepresentation(image, 0.2) {
+
+        let imageName = name
+        let imageData = data
+        print(name)
+        print(image)
+        AlertHelper.showProgress()
+        UploadImageAPI.sharedInstance.uploadImage(imageName: imageName, imageData: imageData) { result in
+          switch result {
+          case .success(let userDetails):
+              break
+          case .error(let title, let message):
+            print("\(title): \(message)")
+          }
+          AlertHelper.hideProgress()
+        }
+      }
+    }
   }
 }

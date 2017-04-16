@@ -25,7 +25,7 @@ class UsersAPI {
       }
       
       guard let statusCode = response.response?.statusCode,
-        statusCode <= 200 && statusCode <= 300,
+        statusCode >= 200 && statusCode <= 300,
         let data = response.data else {
           print("ContentAPI status code: \(response.response?.statusCode)")
           return completionHandler(.error(title: "Atenção", message: "Parece que os servidores estão um pouco instáveis, tente novamente em instantes."))
