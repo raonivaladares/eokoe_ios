@@ -53,7 +53,9 @@ class UserDetailsViewController: UIViewController {
         self.viewModel = UserDetailsViewModel(userDetails: userDetails)
         self.buildUI()
       case .error(let title, let message):
-        print("\(title): \(message)")
+        AlertHelper.message(viewController: self, title: title, message: message) {
+          _ = self.navigationController?.popViewController(animated: true)
+        }
       }
       AlertHelper.hideProgress()
     }
@@ -83,7 +85,6 @@ extension UserDetailsViewController: PhotoPickerDelegate {
   func handlerSelected(selected: UIImage?, name: String?) {
     if let image = selected, let name = name  {
       if let data = UIImageJPEGRepresentation(image, 0.2) {
-
         let imageName = name
         let imageData = data
         print(name)
@@ -91,10 +92,10 @@ extension UserDetailsViewController: PhotoPickerDelegate {
         AlertHelper.showProgress()
         UploadImageAPI.sharedInstance.uploadImage(imageName: imageName, imageData: imageData) { result in
           switch result {
-          case .success(let userDetails):
-              break
+          case .success(_):
+            AlertHelper.message(viewController: self, title: "Foto enviada", message: "Sua foto foi enviada com sucesso!")
           case .error(let title, let message):
-            print("\(title): \(message)")
+            AlertHelper.message(viewController: self, title: title, message: message)
           }
           AlertHelper.hideProgress()
         }

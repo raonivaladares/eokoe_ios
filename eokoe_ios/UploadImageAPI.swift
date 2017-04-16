@@ -5,7 +5,7 @@ import SwiftyJSON
 class UploadImageAPI {
   enum Result {
     case error(title: String, message: String)
-    case success(response: String)
+    case success()
   }
   
   static let sharedInstance = UploadImageAPI()
@@ -18,11 +18,9 @@ class UploadImageAPI {
   }
   
   func uploadImage(imageName: String, imageData: Data, completionHandler: @escaping (Result) -> Void) {
-    //let url = try! URLRequest(url: URL(string: baseURL)!, method: .post, headers: headers)
     Alamofire.upload(
       multipartFormData: { multipartFormData in
         multipartFormData.append(imageData, withName: "image", fileName: imageName, mimeType: "image/png")
-        
     },
       to: baseURL, headers: headers,
       encodingCompletion: { encodingResult in
@@ -44,14 +42,13 @@ class UploadImageAPI {
             
             let json = JSON(data: data)
             print(json)
-            completionHandler(.success(response: json.description))
+            completionHandler(.success())
           }
         case .failure(let encodingError):
           print(encodingError)
           completionHandler(.error(title: "Atenção", message: "Parece que os servidores estão um pouco instáveis, tente novamente em instantes."))
         }
-    }
-    )
+    })
   }
 }
 
