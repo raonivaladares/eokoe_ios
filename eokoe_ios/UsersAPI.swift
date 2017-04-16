@@ -9,7 +9,7 @@ class UsersAPI {
   }
   
   static let sharedInstance = UsersAPI()
-  private var baseURL = "https://testmobiledev.eokoe.com/users"
+  private var baseURL = "https://testmobiledev.eokoe.com"
   private var headers: [String: String] = [:]
   
   // MARK: Inits
@@ -18,7 +18,8 @@ class UsersAPI {
   }
   
   func getUsers(completionHandler: @escaping (Result) -> Void) {
-    Alamofire.request(baseURL, headers: headers).responseJSON { response in
+    let endPoint = "/users"
+    Alamofire.request(baseURL + endPoint, headers: headers).responseJSON { response in
       guard response.result.isSuccess else {
         print("UsersAPI Error: \(response.result.error.debugDescription)")
         return completionHandler(.error(title: "Atenção", message: "Nossos servidores não estão respondendo, isso pode ser causado por uma fraca conexão ou um erro em nossos próprios servidores."))
@@ -40,7 +41,7 @@ class UsersAPI {
   }
   
   func getUsersWithIndex(lastUserIndex: Int, completionHandler: @escaping (Result) -> Void) {
-    let endPoint = "?start=20&limit=20"
+    let endPoint = "/users?start=\(lastUserIndex)&limit=20"
     Alamofire.request(baseURL + endPoint, headers: headers).responseJSON { response in
       guard response.result.isSuccess else {
         print("UsersAPI Error: \(response.result.error.debugDescription)")

@@ -34,7 +34,6 @@ class UsersTableViewController: UITableViewController {
         self.viewModel = UsersViewModel(users: users, pageIndex: pageIndex)
         self.tableView.reloadData()
       case .error(let title, let message):
-        print("\(title): \(message)")
         AlertHelper.message(viewController: self, title: title, message: message)
       }
       AlertHelper.hideProgress()
@@ -82,11 +81,8 @@ extension UsersTableViewController {
         switch result {
         case .success(let users, let pageIndex):
           self.viewModel?.update(newUsers: users, pageIndex: pageIndex)
-          
           self.tableView.reloadData()
-          print(users)
         case .error(let title, let message):
-          print("\(title): \(message)")
           AlertHelper.message(viewController: self, title: title, message: message)
         }
         self.isRequesting = false
