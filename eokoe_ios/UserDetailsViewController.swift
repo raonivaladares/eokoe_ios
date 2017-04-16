@@ -17,21 +17,13 @@ class UserDetailsViewController: UIViewController {
   
   // MARK: View life-cycle
   override func viewDidLoad() {
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.isTranslucent = true
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
+    scrollView.isHidden = true
+    setupNavigationBar()
+    
     photoPicker = PhotoPicker(viewController: self)
     photoPicker.photoPickerDelegate = self
+    
     requestUserDetails()
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    navigationController?.navigationBar.isTranslucent = UINavigationBar.appearance().isTranslucent
-    navigationController?.navigationBar.setBackgroundImage(UINavigationBar.appearance().backgroundImage(for: UIBarMetrics.default), for:UIBarMetrics.default)
-    navigationController?.navigationBar.shadowImage = UINavigationBar.appearance().shadowImage
   }
   
   override func viewDidLayoutSubviews() {
@@ -44,6 +36,9 @@ class UserDetailsViewController: UIViewController {
     photoPicker.callActionMenu(sender: sender)
   }
   
+  @IBAction func backAction(_ sender: UIBarButtonItem) {
+    self.dismiss(animated: true)
+  }
   // MARK: Private methods
   private func requestUserDetails() {
     AlertHelper.showProgress()
@@ -52,6 +47,7 @@ class UserDetailsViewController: UIViewController {
       case .success(let userDetails):
         self.viewModel = UserDetailsViewModel(userDetails: userDetails)
         self.buildUI()
+        self.scrollView.isHidden = false
       case .error(let title, let message):
         AlertHelper.message(viewController: self, title: title, message: message) {
           _ = self.navigationController?.popViewController(animated: true)
@@ -73,6 +69,8 @@ class UserDetailsViewController: UIViewController {
 }
 
 // MARK: Extensions
+extension UserDetailsViewController: TransparentNavigationBar {}
+
 extension UserDetailsViewController: Injectable {
   typealias T = Int
   
