@@ -198,6 +198,7 @@
 		D19A8E951E9FC6F10039DECA /* eokoe_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D19A8F1D1EA527410039DECA /* Helpers */,
 				D19A8EF31EA1347D0039DECA /* Extensions */,
 				D19A8EF21EA12A590039DECA /* Cells */,
 				D19A8EE51EA0127C0039DECA /* ViewModels */,
@@ -210,8 +211,6 @@
 				D19A8E9D1E9FC6F10039DECA /* Assets.xcassets */,
 				D19A8E9F1E9FC6F10039DECA /* LaunchScreen.storyboard */,
 				D19A8EA21E9FC6F10039DECA /* Info.plist */,
-				D19A8EEC1EA027060039DECA /* AlertHelper.swift */,
-				D19A8F061EA2D1E90039DECA /* PhotoPicker.swift */,
 			);
 			path = eokoe_ios;
 			sourceTree = "<group>";
@@ -338,6 +337,15 @@
 			children = (
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D19A8F1D1EA527410039DECA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D19A8EEC1EA027060039DECA /* AlertHelper.swift */,
+				D19A8F061EA2D1E90039DECA /* PhotoPicker.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
