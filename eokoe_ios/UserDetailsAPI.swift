@@ -9,16 +9,11 @@ class UserDetailsAPI {
   }
   
   static let sharedInstance = UserDetailsAPI()
-  private var baseURL = "https://testmobiledev.eokoe.com/user/"
-  private var headers: [String: String] = [:]
+  private var endPoint = "/user/"
   
-  // MARK: Inits
-  init(){
-    headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
-  }
-
+  // MARK: Public methods
   func getUserDetails(userID: Int, completionHandler: @escaping (Result) -> Void) {
-    EokoeClient.sharedInstance.request(url: baseURL + userID.description) { response in
+    EokoeClient.sharedInstance.request(endPoint: endPoint + userID.description) { response in
       switch response {
       case .success(let json):
         guard let userDetails = self.buildUserDetails(json: json) else {
@@ -32,6 +27,7 @@ class UserDetailsAPI {
   }
 }
 
+// MARK: Extensions
 extension UserDetailsAPI: UserDetailsModelsFromJSON {}
 
 

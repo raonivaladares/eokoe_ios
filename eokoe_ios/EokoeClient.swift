@@ -9,7 +9,7 @@ class EokoeClient {
   }
   
   static let sharedInstance = EokoeClient()
-  private var baseURL = "https://testmobiledev.eokoe.com"
+  var baseURL = "https://testmobiledev.eokoe.com"
   private var headers: [String: String] = [:]
   
   // MARK: Inits
@@ -17,12 +17,11 @@ class EokoeClient {
     headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
   }
   
-  func request(url: String, completionHandler: @escaping (Result) -> Void) {
-    Alamofire.request(url, headers: headers)
+  func request(endPoint: String, completionHandler: @escaping (Result) -> Void) {
+    Alamofire.request(baseURL + endPoint, headers: headers)
       .responseJSON { response in
         self.responseHandler(response: response, completionHandler: completionHandler)
     }
-    
   }
   
   private func responseHandler(response: DataResponse<Any>, completionHandler: @escaping (Result) -> Void) {
