@@ -19,47 +19,29 @@ class UsersAPI {
   
   func getUsers(completionHandler: @escaping (Result) -> Void) {
     let endPoint = "/users"
-    Alamofire.request(baseURL + endPoint, headers: headers).responseJSON { response in
-      guard response.result.isSuccess else {
-        print("UsersAPI Error: \(response.result.error.debugDescription)")
-        return completionHandler(.error(title: "Atenção", message: "Nossos servidores não estão respondendo, isso pode ser causado por uma fraca conexão ou um erro em nossos próprios servidores."))
+    EokoeClient.sharedInstance.request(endPoint: endPoint) { response in
+      switch response {
+      case .success(let json):
+        let users = self.buildUsers(json: json)
+        let pageIndex = self.buildPageIndex(json: json)
+        completionHandler(.success(users: users, pageIndex: pageIndex))
+      case .error(let title, let message):
+        completionHandler(.error(title: title, message: message))
       }
-      
-      guard let statusCode = response.response?.statusCode,
-        statusCode >= 200 && statusCode <= 300,
-        let data = response.data else {
-          print("ContentAPI status code: \(response.response?.statusCode)")
-          return completionHandler(.error(title: "Atenção", message: "Parece que os servidores estão um pouco instáveis, tente novamente em instantes."))
-      }
-      
-      let json = JSON(data: data)
-      let users = self.buildUsers(json: json)
-      let pageIndex = self.buildPageIndex(json: json)
-      
-      completionHandler(.success(users: users, pageIndex: pageIndex))
     }
   }
   
   func getUsersWithIndex(lastUserIndex: Int, completionHandler: @escaping (Result) -> Void) {
     let endPoint = "/users?start=\(lastUserIndex)&limit=20"
-    Alamofire.request(baseURL + endPoint, headers: headers).responseJSON { response in
-      guard response.result.isSuccess else {
-        print("UsersAPI Error: \(response.result.error.debugDescription)")
-        return completionHandler(.error(title: "Atenção", message: "Nossos servidores não estão respondendo, isso pode ser causado por uma fraca conexão ou um erro em nossos próprios servidores."))
+    EokoeClient.sharedInstance.request(endPoint: endPoint) { response in
+      switch response {
+      case .success(let json):
+        let users = self.buildUsers(json: json)
+        let pageIndex = self.buildPageIndex(json: json)
+        completionHandler(.success(users: users, pageIndex: pageIndex))
+      case .error(let title, let message):
+        completionHandler(.error(title: title, message: message))
       }
-      
-      guard let statusCode = response.response?.statusCode,
-        statusCode >= 200 && statusCode <= 300,
-        let data = response.data else {
-          print("ContentAPI status code: \(response.response?.statusCode)")
-          return completionHandler(.error(title: "Atenção", message: "Parece que os servidores estão um pouco instáveis, tente novamente em instantes."))
-      }
-      
-      let json = JSON(data: data)
-      let users = self.buildUsers(json: json)
-      let pageIndex = self.buildPageIndex(json: json)
-      
-      completionHandler(.success(users: users, pageIndex: pageIndex))
     }
   }
 }
