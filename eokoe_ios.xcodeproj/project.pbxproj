@@ -25,8 +25,8 @@
 		D19A8ED51E9FFCE70039DECA /* UsersModelFromJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8ED41E9FFCE70039DECA /* UsersModelFromJSONTests.swift */; };
 		D19A8ED91EA000950039DECA /* JSONUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8ED81EA000950039DECA /* JSONUsers.json */; };
 		D19A8EDA1EA0011A0039DECA /* JSONUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8ED81EA000950039DECA /* JSONUsers.json */; };
-		D19A8EDC1EA002180039DECA /* JSONWithoutKeyResults.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */; };
-		D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResults.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */; };
+		D19A8EDC1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json */; };
+		D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResultsAndPagination.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDB1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json */; };
 		D19A8EE01EA0080A0039DECA /* JSONUserDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */; };
 		D19A8EE11EA009BA0039DECA /* JSONUserDataEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */; };
 		D19A8EE31EA00E6F0039DECA /* JSONUserWrongKeys.json in Resources */ = {isa = PBXBuildFile; fileRef = D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */; };
@@ -100,7 +100,7 @@
 		D19A8ED01E9FEE070039DECA /* UsersModelFromJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModelFromJSON.swift; sourceTree = "<group>"; };
 		D19A8ED41E9FFCE70039DECA /* UsersModelFromJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersModelFromJSONTests.swift; sourceTree = "<group>"; };
 		D19A8ED81EA000950039DECA /* JSONUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUsers.json; sourceTree = "<group>"; };
-		D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONWithoutKeyResults.json; sourceTree = "<group>"; };
+		D19A8EDB1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONWithoutKeyResultsAndPagination.json; sourceTree = "<group>"; };
 		D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUserDataEmpty.json; sourceTree = "<group>"; };
 		D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONUserWrongKeys.json; sourceTree = "<group>"; };
 		D19A8EE61EA012AA0039DECA /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 			children = (
 				D19A8EE21EA00E6F0039DECA /* JSONUserWrongKeys.json */,
 				D19A8EDF1EA0080A0039DECA /* JSONUserDataEmpty.json */,
-				D19A8EDB1EA002180039DECA /* JSONWithoutKeyResults.json */,
+				D19A8EDB1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json */,
 				D19A8ED81EA000950039DECA /* JSONUsers.json */,
 			);
 			name = MockedJSONs;
@@ -474,7 +474,7 @@
 				D19A8E9E1E9FC6F10039DECA /* Assets.xcassets in Resources */,
 				D19A8EE41EA00FE30039DECA /* JSONUserWrongKeys.json in Resources */,
 				D19A8EE11EA009BA0039DECA /* JSONUserDataEmpty.json in Resources */,
-				D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResults.json in Resources */,
+				D19A8EDE1EA0032E0039DECA /* JSONWithoutKeyResultsAndPagination.json in Resources */,
 				D19A8EDA1EA0011A0039DECA /* JSONUsers.json in Resources */,
 				D19A8E9C1E9FC6F10039DECA /* Main.storyboard in Resources */,
 			);
@@ -486,7 +486,7 @@
 			files = (
 				D19A8EE31EA00E6F0039DECA /* JSONUserWrongKeys.json in Resources */,
 				D19A8ED91EA000950039DECA /* JSONUsers.json in Resources */,
-				D19A8EDC1EA002180039DECA /* JSONWithoutKeyResults.json in Resources */,
+				D19A8EDC1EA002180039DECA /* JSONWithoutKeyResultsAndPagination.json in Resources */,
 				D19A8EE01EA0080A0039DECA /* JSONUserDataEmpty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

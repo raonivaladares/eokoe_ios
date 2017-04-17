@@ -20,16 +20,23 @@ class UsersModelFromJSONTests: XCTestCase {
     invalidJSONUserWrongKeys = loadFile(name: "JSONUserWrongKeys")
     XCTAssertNotNil(invalidJSONUserWrongKeys)
     
-    invalidJSON = loadFile(name: "JSONWithoutKeyResults")
+    invalidJSON = loadFile(name: "JSONWithoutKeyResultsAndPagination")
     XCTAssertNotNil(invalidJSON)
   }
   
   func testValidCases() {
+    let pageIndex = buildPageIndex(json: validJSON)
+    XCTAssert(pageIndex?.start == 20, "validJSON: pageIndex should have start: 20")
+    XCTAssert(pageIndex?.limit == 20, "validJSON: pageIndex should have limit: 20")
+    
     let users = buildUsers(json: validJSON)
     XCTAssert(users.count == 20, "validJSON: should have 20 users")
   }
   
   func testInvalidCases() {
+    let pageIndex = buildPageIndex(json: invalidJSON)
+    XCTAssertNil(pageIndex, "invalidJSON: pageIndex should be nil")
+    
     let users = buildUsers(json: invalidJSON)
     XCTAssert(users.count == 0, "invalidJSON: should have 0 users")
     
