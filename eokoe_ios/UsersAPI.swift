@@ -9,30 +9,11 @@ class UsersAPI {
   }
   
   static let sharedInstance = UsersAPI()
-  private var baseURL = "https://testmobiledev.eokoe.com"
-  private var headers: [String: String] = [:]
   
-  // MARK: Inits
-  init(){
-    headers["X-API-Key"] = "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"    
-  }
-  
-  func getUsers(completionHandler: @escaping (Result) -> Void) {
-    let endPoint = "/users"
-    EokoeClient.sharedInstance.request(endPoint: endPoint) { response in
-      switch response {
-      case .success(let json):
-        let users = self.buildUsers(json: json)
-        let pageIndex = self.buildPageIndex(json: json)
-        completionHandler(.success(users: users, pageIndex: pageIndex))
-      case .error(let title, let message):
-        completionHandler(.error(title: title, message: message))
-      }
-    }
-  }
-  
-  func getUsersWithIndex(lastUserIndex: Int, completionHandler: @escaping (Result) -> Void) {
-    let endPoint = "/users?start=\(lastUserIndex)&limit=20"
+  // MARK: Public methods
+  func getUsers(lastUserIndex: Int? = nil, completionHandler: @escaping (Result) -> Void) {
+    let endPoint: String = "/users?start=\(lastUserIndex ?? 0)&limit=20"
+    
     EokoeClient.sharedInstance.request(endPoint: endPoint) { response in
       switch response {
       case .success(let json):

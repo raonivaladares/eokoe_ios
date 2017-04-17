@@ -14,10 +14,10 @@ extension UsersModelsFromJSON {
       print("BuildUsers: there is no key: pagination limit")
       return nil
     }
-    
+    print("Index start: \(start) and limit: \(limit)")
     return PageIndex(start: start, limit: limit)
-    
   }
+  
   func buildUsers(json: JSON) -> [User] {
     var users: [User] = []
     

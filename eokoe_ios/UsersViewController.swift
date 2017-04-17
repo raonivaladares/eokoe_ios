@@ -77,7 +77,7 @@ extension UsersTableViewController {
     
     if (indexPath.row == quantity - 1) && !isRequesting  {
       isRequesting = true
-      UsersAPI.sharedInstance.getUsersWithIndex(lastUserIndex: lastUserIndex) { result in
+      UsersAPI.sharedInstance.getUsers(lastUserIndex: lastUserIndex) { result in
         switch result {
         case .success(let users, let pageIndex):
           self.viewModel?.update(newUsers: users, pageIndex: pageIndex)
