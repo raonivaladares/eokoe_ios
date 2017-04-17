@@ -51,6 +51,7 @@
 		D19A8F181EA4069F0039DECA /* PageIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F151EA3F7C50039DECA /* PageIndex.swift */; };
 		D19A8F191EA406AA0039DECA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8EFC1EA1A6050039DECA /* UserDetails.swift */; };
 		D19A8F1C1EA4EB260039DECA /* EokoeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F1B1EA4EB260039DECA /* EokoeClient.swift */; };
+		D19A8F1F1EA5289B0039DECA /* PageIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19A8F1E1EA5289B0039DECA /* PageIndexTests.swift */; };
 		E5644E0CCBF58528202F6BE0 /* Pods_eokoe_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5665CAC0AFA5403ED7031B73 /* Pods_eokoe_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		D19A8F111EA3D72F0039DECA /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		D19A8F151EA3F7C50039DECA /* PageIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageIndex.swift; sourceTree = "<group>"; };
 		D19A8F1B1EA4EB260039DECA /* EokoeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EokoeClient.swift; sourceTree = "<group>"; };
+		D19A8F1E1EA5289B0039DECA /* PageIndexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageIndexTests.swift; sourceTree = "<group>"; };
 		E20F5B89E95FEC5A51B0948C /* Pods_eokoe_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eokoe_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 			children = (
 				D19A8ECD1E9FE72A0039DECA /* UserTests.swift */,
 				D19A8EFE1EA1AD8F0039DECA /* UserDetailsTests.swift */,
+				D19A8F1E1EA5289B0039DECA /* PageIndexTests.swift */,
 			);
 			name = ModelsTests;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				D19A8F181EA4069F0039DECA /* PageIndex.swift in Sources */,
 				D19A8EAC1E9FC6F20039DECA /* eokoe_iosTests.swift in Sources */,
 				D19A8EEA1EA013750039DECA /* UsersViewModelsTests.swift in Sources */,
+				D19A8F1F1EA5289B0039DECA /* PageIndexTests.swift in Sources */,
 				D19A8F191EA406AA0039DECA /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
